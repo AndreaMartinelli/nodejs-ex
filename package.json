@@ -1,12 +1,8 @@
 {
-  "name": "qualprox",
-  "version": "1.0.0",
+  "name": "nodejs-ex",
+  "version": "0.0.1",
   "description": "",
   "main": "serverWeb.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && tar -zcf qualprox.tar . " 
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +10,12 @@
     "express": "4.14.0",
     "socket.io": "1.4.8",
     "validator": "5.7.0"
+  },
+  "engine": {
+  "node": "*",
+  "npm": "*"
+  },
+  "scripts": {
+    "start": "node serverWeb.js"
   }
 }

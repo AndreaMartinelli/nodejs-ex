@@ -6,8 +6,8 @@ var fs = require("fs"),         // to read static files
     
 var app = http.createServer(handler);
 io = io.listen(app);
-app.listen(8080);
-console.log("http server on port 8080");
+app.listen(3001);
+console.log("http server on port 3001");
 
 
 function handler(req, res){

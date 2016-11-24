@@ -1,0 +1,31 @@
+<html>
+  <head>        
+      <title>Tela Resposta</title>
+    <!-- script src="http://dvmte40744:3000/socket.io/socket.io.js"></script -->
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+
+
+      var socketConnect = function(room) {
+        return io('http://localhost:3000', {query: 'channel=' + room});
+      };
+
+      //Pode ser qualquer identificador
+      var socket = socketConnect('0116');
+
+      //Recebe Evento
+      socket.on('receivedUpdate', function (data) {
+        document.getElementById("dvTeste").innerHTML=JSON.stringify(data);
+      });
+
+      
+    </script>
+  </head>
+  <body>
+    
+    <div id="dvTeste"></div>
+    
+  </body>
+  
+</html>
